@@ -5,8 +5,8 @@ import time
 GPIO.setmode(GPIO.BCM)
   
 # Hier werden die Ausgangs-Pin deklariert, an dem die LEDs angeschlossen sind.
-LED_ROT = 5
-LED_GRUEN = 4
+LED_ROT = 16
+LED_GRUEN = 20
 GPIO.setup(LED_ROT, GPIO.OUT, initial= GPIO.LOW)
 GPIO.setup(LED_GRUEN, GPIO.OUT, initial= GPIO.LOW)
   
