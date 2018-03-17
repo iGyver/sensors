@@ -14,7 +14,7 @@ sleeptime = 2
 DHTSensor = Adafruit_DHT.DHT11
 
 # Hier kann der Pin deklariert werden, an dem das Sensormodul angeschlossen ist
-GPIO_Pin = 23
+GPIO_Pin = 4
 
 print('KY-015 Sensortest - Temperatur und Luftfeuchtigkeit')
 
