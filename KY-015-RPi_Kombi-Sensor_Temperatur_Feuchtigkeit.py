@@ -28,6 +28,10 @@ try:
 
             # Das gemessene Ergebnis wird in der Konsole ausgegeben
             print('Temperatur = {0:0.1f}°C  | rel. Luftfeuchtigkeit = {1:0.1f}%'.format(Temperatur, Luftfeuchte))
+            if Luftfeuchte > 41:
+                print("Super Luftfeuchtigkeit weil über 40 %")
+            else:
+                print("Aufpassen es ist zu trocken")
 
         # Da der Raspberry Pi aufgrund des Linux-Betriebsystems für Echtzeitanwendungen benachteiligt ist,
         # kann es sein, dass aufgrund von Timing Problemen die Kommunikation scheitern kann.
