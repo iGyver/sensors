@@ -3,7 +3,7 @@
 
 # Benoetigte Module werden importiert und eingerichtet
 import RPi.GPIO as GPIO
-import Adafruit_Python_DHT
+import Adafruit_DHT
 import time
 
 # Die Pause von zwei Sekunden zwischen den Messungen wird hier eingestellt
