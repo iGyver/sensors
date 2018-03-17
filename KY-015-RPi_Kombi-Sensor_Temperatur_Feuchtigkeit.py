@@ -7,7 +7,13 @@ import Adafruit_DHT
 import time
 
 # Die Pause von zwei Sekunden zwischen den Messungen wird hier eingestellt
-sleeptime = 2
+sleeptime = 60
+
+# Email verschicken, wenn Luftfeuchtigkeit nicht richtig
+# http://techfrage.de/question/2178/gmail-smtp-server-einstellungen/
+
+
+
 
 # Sensor should be set to Adafruit_DHT.DHT11,
 # Adafruit_DHT.DHT22, or Adafruit_DHT.AM2302.
@@ -30,6 +36,7 @@ try:
             print('Temperatur = {0:0.1f}°C  | rel. Luftfeuchtigkeit = {1:0.1f}%'.format(Temperatur, Luftfeuchte))
             if Luftfeuchte > 41:
                 print("Super Luftfeuchtigkeit weil über 40 %")
+                msg['Subject'] = 'Luftfeuchtigkeit im Keller'
             else:
                 print("Aufpassen es ist zu trocken")
 
