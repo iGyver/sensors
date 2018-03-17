@@ -3,15 +3,15 @@
 
 # Benoetigte Module werden importiert und eingerichtet
 import RPi.GPIO as GPIO
-import Adafruit_DHT
+import Adafruit_Python_DHT
 import time
 
 # Die Pause von zwei Sekunden zwischen den Messungen wird hier eingestellt
 sleeptime = 2
 
-# Sensor should be set to Adafruit_DHT.DHT11,
-# Adafruit_DHT.DHT22, or Adafruit_DHT.AM2302.
-DHTSensor = Adafruit_DHT.DHT11
+# Sensor should be set to Adafruit_Python_DHT.DHT11,
+# Adafruit_Python_DHT.DHT22, or Adafruit_Python_DHT.AM2302.
+DHTSensor = Adafruit_Python_DHT.DHT11
 
 # Hier kann der Pin deklariert werden, an dem das Sensormodul angeschlossen ist
 GPIO_Pin = 4
