@@ -1,2 +1,2 @@
 # sensors
-Codes and Scripts for using of Sensors. Mostly Phython.
+Codes and Scripts for using of Sensors. Mostly Phython3.
