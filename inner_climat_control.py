@@ -5,8 +5,8 @@ import time
 from time import sleep
 import RPi.GPIO as GPIO
 
-# Einstellen wie oft gemessen werden soll. (Es reicht einmal pro Minute)
-sleeptime = 60
+# Einstellen wie oft gemessen werden soll. (Es reicht einmal pro Minute "60s")
+sleeptime = 1
 
 """Der One-Wire EingangsPin wird deklariert und der integrierte PullUp-Widerstand aktiviert
 Der PullUp-Widerstand ist im Sensor enthalten"""
@@ -47,7 +47,7 @@ def TemperaturAuswertung():
     while lines[0].strip()[-3:] != 'YES':
         time.sleep(0.2)
         lines = TemperaturMessung()
-    equals_pos = lines[1].find('t=')
+        equals_pos = lines[1].find('t=')
     if equals_pos != -1:
         temp_string = lines[1][equals_pos+2:]
         temp_c = float(temp_string) / 1000.0
@@ -60,6 +60,7 @@ try:
     while True:
         print ('---------------------------------------')
         print("Temperatur:", TemperaturAuswertung(), "°C")
+        print("Was koennte hier stehen?")
         time.sleep(sleeptime)
 
 except KeyboardInterrupt:
